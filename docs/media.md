@@ -21,7 +21,9 @@ This document catalogues all photographic evidence, video demonstrations, and sy
 
 ---
 
-## 2. Video Demonstration Index: `test1.mp4`
+## 2. Video Demonstrations
+
+### 2.1 Video Demonstration 1: Single-Cycle Rapid Test (`test1.mp4`)
 
 * **File Location:** [`media/videos/test1.mp4`](../media/videos/test1.mp4)
 * **Duration:** 34.93 Seconds
@@ -34,7 +36,7 @@ This document catalogues all photographic evidence, video demonstrations, and sy
   <img src="assets/conveyor_sorting_demo.gif" alt="Animated Preview of Conveyor Sorting Operation" width="70%" />
 </p>
 
-### Chronological Verification Breakdown
+#### Chronological Verification Breakdown: `test1.mp4`
 
 | Timestamp Interval | Visible Physical Action | Firmware State / Internal Operation | Hardware Status Verified |
 |:---:|:---|:---|:---|
@@ -48,7 +50,35 @@ This document catalogues all photographic evidence, video demonstrations, and sy
 
 ---
 
+### 2.2 Video Demonstration 2: Full Continuous Multi-Package Demonstration (`24BRS1321,1034 Project Video.mp4`)
+
+* **File Location:** [`media/videos/24BRS1321,1034 Project Video.mp4`](../media/videos/24BRS1321,1034%20Project%20Video.mp4)
+* **Cloud Mirror Link:** [Google Drive Full-HD Demonstration Video Placeholder]
+* **Duration:** 72.60 Seconds (01:12.60)
+* **Framerate & Resolution:** 30.00 fps, 1920 x 1080 px (1080p Full HD)
+* **Format & Codec:** H.264 / AAC MP4 Container
+* **File Size:** 178 MB (186,762,174 bytes)
+* **Operational Scope:** Complete system power-on, optical sensor initialization, and 4 consecutive sorting runs across dual divergent chutes (2 brown craft boxes into Left Chute, 1 blue parcel + 1 white parcel into Right Chute) with 100% sorting accuracy.
+
+#### Chronological Verification Breakdown: Multi-Package Operational Video
+
+| Timestamp Interval | Physical Observed Action | Subsystem & Firmware State | Operational Verification |
+|:---:|:---|:---|:---|
+| **00:00 – 00:20** | Overhead camera view of the stationary rotary carousel turntable, dual diversion chutes, and optical gantry. Operator connects the USB host cable. | System unpowered / quiescent. Servos unattached. | Hardware verification of chassis alignment and mechanical integrity. |
+| **00:20 – 00:26** | Arduino Uno powers up. TCS3200 optical gantry illumination LEDs illuminate with brilliant white light. | `setup()` executes: `pinMode()` configuration, servo attachment, flap home command (`125°`), continuous servo start (`100`). State: `BELT_RUNNING`. | Active illumination and sensor boot verified. Turntable begins rotation. |
+| **00:26 – 00:34** | **Cycle 1 (Brown Box #1):** First brown craft parcel enters the optical shroud under active illumination. | Baseline deviation triggered. 3 consecutive samples validate package presence. Brown color profile matched. State: `WAITING_TO_STOP`. | Real-time classification verified via photodiode pulse frequency acquisition. |
+| **00:34 – 00:40** | Brown Box #1 transits downstream arc (3200 ms). Conveyor stops (`SERVO_STOP = 90`). Left gate flap actuates to `30°`. | State transitions: `WAITING_TO_STOP` &rarr; `FLAPS_EXTENDED` &rarr; `FLAPS_RETURNED`. Brown Box #1 deflected into **Left Chute**. | Flap dwell (700 ms) verified; parcel cleanly deposited in receptacle. |
+| **00:40 – 00:48** | **Cycle 2 (Blue Box):** Turntable resumes. Operator introduces blue wrapped package ("ALL ON"). Package passes under TCS3200. | Blue spectral signature classified via RGB frequency analysis. `packageDetectedAt` armed. State: `WAITING_TO_STOP`. | Multi-color optical discrimination verified under continuous conveyor operation. |
+| **00:48 – 00:53** | Blue Box reaches diverter station. Drive servo halts. Right gate flap actuates to divert package into **Right Chute**. | State: `FLAPS_EXTENDED` &rarr; `FLAPS_RETURNED`. Blue parcel cleanly deflected into right bin. | Dual-chute selective actuation verified (Left vs Right channel routing). |
+| **00:53 – 01:00** | **Cycle 3 (White Parcel):** Turntable resumes. White wrapped parcel (with directional marking) enters optical hood. | High-reflectance white spectrum acquired. Debounce verified. 3200 ms transit timer armed. | Repeatable optical classification across high-contrast specimens. |
+| **01:00 – 01:04** | White parcel arrives at diversion gates. Conveyor halts. Flap sweeps parcel into **Right Chute** alongside the blue package. | Precise deceleration and deflection cycle executed without package collision. | High-density bin accumulation verified. |
+| **01:04 – 01:12** | **Cycle 4 (Brown Box #2):** Fourth parcel (second brown craft box) introduced, detected, and diverted into **Left Chute**. | 4 consecutive automated sorting cycles completed. Cumulative totals: 2 brown parcels in Left Chute, 2 parcels (1 blue, 1 white) in Right Chute. | **100% sorting accuracy achieved** across multi-item continuous stream. |
+
+---
+
 ## 3. High-Speed Actuation Sequence (Frame-by-Frame)
+
+### 3.1 Single-Cycle Keyframes (`test1.mp4`)
 
 The keyframes below illustrate the physical package diversion from $T = 18\text{s}$ through $T = 28\text{s}$:
 
@@ -61,6 +91,27 @@ The keyframes below illustrate the physical package diversion from $T = 18\text{
   <img src="../media/frames/actuation_24s.jpg" alt="Actuation 24s: Flap Push Initiated" width="30%" />
   <img src="../media/frames/actuation_26s.jpg" alt="Actuation 26s: Full Deflection into Chute" width="30%" />
   <img src="../media/frames/actuation_28s.jpg" alt="Actuation 28s: Flap Retraction and Restart" width="30%" />
+</p>
+
+### 3.2 Multi-Package Continuous Sorting Keyframes (`24BRS1321,1034 Project Video.mp4`)
+
+The high-resolution keyframes below document the 4-package continuous sorting demonstration:
+
+<p align="center">
+  <img src="../media/frames/video2_01_power_on.jpg" alt="T=23s: Power-on and LED illumination" width="48%" />
+  <img src="../media/frames/video2_02_brown1_detect.jpg" alt="T=32s: Brown Box 1 detection" width="48%" />
+</p>
+<p align="center">
+  <img src="../media/frames/video2_03_brown1_divert.jpg" alt="T=38s: Brown Box 1 diversion into left chute" width="48%" />
+  <img src="../media/frames/video2_04_blue_detect.jpg" alt="T=46s: Blue Box optical detection" width="48%" />
+</p>
+<p align="center">
+  <img src="../media/frames/video2_05_blue_divert.jpg" alt="T=50s: Blue Box deflection into right chute" width="48%" />
+  <img src="../media/frames/video2_06_white_transit.jpg" alt="T=58s: White Box downstream transit" width="48%" />
+</p>
+<p align="center">
+  <img src="../media/frames/video2_07_white_divert.jpg" alt="T=62s: White Box diversion into right chute" width="48%" />
+  <img src="../media/frames/video2_08_multi_sorted_final.jpg" alt="T=70s: Final multi-package sorted distribution" width="48%" />
 </p>
 
 ---

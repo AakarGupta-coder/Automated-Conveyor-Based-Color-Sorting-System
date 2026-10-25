@@ -14,6 +14,9 @@ __pycache__/
 Project Report.docx
 code.txt
 
+# Large video assets exceeding GitHub 100MB limit (mirrored on Google Drive)
+media/videos/*Project Video.mp4
+
 # Arduino build artifacts
 *.hex
 *.elf

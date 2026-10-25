@@ -38,7 +38,7 @@
 | **Actuator Topology** | 1x Continuous Rotation Drive Servo (D10) + 2x TowerPro SG90 9g Micro Servos (D11, D12) |
 | **Firmware Architecture** | Non-Blocking Finite State Machine (4 States) with `millis()` Scheduling |
 | **Telemetry Interface** | USB CDC Serial Monitor (9600 Baud, 8-N-1) |
-| **Demonstration Media** | Authentic 34.9s video (`media/videos/test1.mp4`) &amp; frame-by-frame photographic logs |
+| **Demonstration Media** | Single-cycle video (`media/videos/test1.mp4`, 34.9s) &amp; Full-HD multi-package demonstration (`media/videos/24BRS1321,1034 Project Video.mp4`, 72.6s, 1080p) |
 
 </div>
 
@@ -439,12 +439,14 @@ For in-depth operational checklists, refer to the [Operation Guide](docs/operati
 
 ---
 
-## 14. Video Demonstration & Timeline
+## 14. Video Demonstrations & Operational Timelines
 
-A full operational demonstration video is included directly in the repository at [`media/videos/test1.mp4`](media/videos/test1.mp4):
+Two authentic video recordings document the physical sorting system across single-item and multi-item operational scenarios:
 
-* **Video File:** `media/videos/test1.mp4` (5.78 MB, 34.93s, 848x478 @ 30 fps)
-* **High-Speed Actuation Sequence:** Documented in [Media Index](docs/media.md#3-high-speed-actuation-sequence-frame-by-frame)
+### Demonstration 1: Single-Cycle Rapid Test (`test1.mp4`)
+
+* **Video File:** [`media/videos/test1.mp4`](media/videos/test1.mp4) (5.78 MB, 34.93s, 848x478 @ 30 fps)
+* **High-Speed Actuation Sequence:** Documented in [Media Index](docs/media.md#31-single-cycle-keyframes-test1mp4)
 
 ```text
 00:00 - 00:08 | Carousel rotating. Operator introduces test package onto belt.
@@ -454,6 +456,22 @@ A full operational demonstration video is included directly in the repository at
 00:22 - 00:25 | Conveyor stops (speed 90). Dual flaps actuate to 30°, deflecting package into chute.
 00:25 - 00:28 | Flaps hold for 700 ms, then retract to home (125°).
 00:28 - 00:34 | Turntable restarts (speed 100). System resets, ready for next item.
+```
+
+### Demonstration 2: Full Continuous Multi-Package Demonstration (`24BRS1321,1034 Project Video.mp4`)
+
+* **Video File:** `media/videos/24BRS1321,1034 Project Video.mp4` (178 MB, 72.60s, 1920x1080 @ 30 fps Full HD)
+* **Cloud Mirror Link:** [Google Drive Full-HD Demonstration Video Link Placeholder]
+* **Full Chronological Breakdown:** Documented in [Media Index](docs/media.md#22-video-demonstration-2-full-continuous-multi-package-demonstration-24brs13211034-project-videomp4)
+
+```text
+00:00 - 00:20 | Stationary turntable overview; USB host cable connected to power Arduino Uno.
+00:20 - 00:26 | System boot: TCS3200 white LEDs light up under gantry; carousel turntable starts rotating.
+00:26 - 00:40 | Cycle 1: Brown Box #1 enters sensor, classified as Brown, transit timer elapses, deflected into Left Chute.
+00:40 - 00:53 | Cycle 2: Blue Box ("ALL ON") transits under sensor, classified as Blue, deflected into Right Chute.
+00:53 - 01:04 | Cycle 3: White Parcel transits under sensor, classified as White, deflected into Right Chute.
+01:04 - 01:12 | Cycle 4: Brown Box #2 transits under sensor, classified as Brown, deflected into Left Chute.
+01:12 | Verification Complete: 4 parcels successfully sorted across dual chutes (100% accuracy).
 ```
 
 ---
@@ -539,10 +557,12 @@ Automated-Conveyor-Based-Color-Sorting-System/
     │   ├── sorted_packages_collection_bin.jpg # Deflected packages in sorting chute
     │   └── originals/                       # Archived original captures (1.jpeg - 10.jpeg)
     ├── frames/                              # High-speed actuation frame extraction
-    │   ├── actuation_18s.jpg .. 28s.jpg     # Deflection sequence keyframes
+    │   ├── actuation_18s.jpg .. 28s.jpg     # Video 1 deflection sequence keyframes
+    │   ├── video2_01s.jpg .. 08s.jpg        # Video 2 multi-package sequence keyframes
     │   └── frame_01s.jpg .. 34s.jpg         # Continuous operation sequence
     └── videos/                              # Demonstration recordings
-        ├── test1.mp4                        # Full working demonstration video (5.78 MB)
+        ├── test1.mp4                        # Single-cycle rapid verification video (5.78 MB)
+        ├── 24BRS1321,1034 Project Video.mp4 # Full-HD multi-package demonstration (178 MB, Google Drive)
         └── README.md                        # Video index & playback notes
 ```
 
