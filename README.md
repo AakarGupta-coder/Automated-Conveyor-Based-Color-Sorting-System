@@ -108,7 +108,7 @@ This project addresses three fundamental engineering challenges:
 | **Rotary Carousel Geometry** | 360° annular turntable with central 4-blade rotor hub | Infinite test loop without belt dead-ends or manual reload |
 | **Optical Frequency Conversion** | TCS3200 IC with 20% frequency scaling ($S_0=\text{HIGH}, S_1=\text{LOW}$) | Converts color intensity directly to digital square wave; immune to ADC noise |
 | **Active Illumination Hood** | Downward-facing sensor mount inside dark gantry chamber with 4 LEDs | Normalizes incident lux and eliminates ambient shadow errors |
-| **Dark Baseline Rejection** | Multi-channel baseline check ($\text{BASE\_TOLERANCE} = 35\%$) | Accurately identifies empty conveyor surface without false triggers |
+| **Dark Baseline Rejection** | Multi-channel baseline check (`BASE_TOLERANCE = 35%`) | Accurately identifies empty conveyor surface without false triggers |
 | **Transient Debounce Logic** | 3 consecutive non-base reads required (`REQUIRED_PACKAGE_READINGS = 3`) | Suppresses conveyor surface imperfections and edge transitions |
 | **Normalized Error Classifier** | Relative error minimization: $\epsilon = \frac{1}{3}\sum |x_c - \text{ref}_c| / \text{ref}_c$ | Scale-invariant color distance matching within 30% tolerance |
 | **Non-Blocking FSM** | 4-state state machine evaluated via timestamp differentials | Ensures continuous sensor polling and zero CPU stalling |
@@ -318,10 +318,10 @@ RGB readRGB() {
 The classifier evaluates raw pulse frequencies against empirical reference centroids established during calibration:
 
 ### 1. Calibrated Reference Constants
-* **Empty Belt Baseline:** $R = 4432\text{ Hz}, G = 3693\text{ Hz}, B = 4541\text{ Hz}$ ($\text{BASE\_TOLERANCE} = 35\%$)
+* **Empty Belt Baseline:** $R = 4432\text{ Hz}, G = 3693\text{ Hz}, B = 4541\text{ Hz}$ (`BASE_TOLERANCE = 35%`)
 * **White Package Centroid:** $R = 15531\text{ Hz}, G = 18231\text{ Hz}, B = 19863\text{ Hz}$
 * **Brown Package Centroid:** $R = 19070\text{ Hz}, G = 13023\text{ Hz}, B = 13031\text{ Hz}$
-* **Color Tolerance Window:** $\text{COLOR\_TOLERANCE} = 0.30$ ($30\%$)
+* **Color Tolerance Window:** `COLOR_TOLERANCE = 0.30` (30%)
 
 ### 2. Relative Error Formulation
 To prevent channel magnitude bias (e.g., Red values overpowering Blue values), each channel is normalized by its reference:

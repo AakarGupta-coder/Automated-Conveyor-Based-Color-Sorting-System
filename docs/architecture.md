@@ -132,7 +132,7 @@ The normalized error is computed against the empirical calibrated centroids for 
 
 * **WHITE Package Reference:** $(R: 15531, G: 18231, B: 19863)$
 * **BROWN Package Reference:** $(R: 19070, G: 13023, B: 13031)$
-* **Threshold Tolerance:** $\text{COLOR\_TOLERANCE} = 0.30$ ($30\%$)
+* **Threshold Tolerance:** `COLOR_TOLERANCE = 0.30` (30%)
 
 $$\text{Result} = \begin{cases}
 \text{"BASE"}, & \text{if } \text{isBase}(x) \\
