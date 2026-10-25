@@ -10,7 +10,6 @@
   <img src="https://img.shields.io/badge/Language-C%2B%2B%20%2F%20Arduino-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="Language" />
   <img src="https://img.shields.io/badge/Sensor-TCS3200%20RGB-FF6F00?style=for-the-badge" alt="Sensor" />
   <img src="https://img.shields.io/badge/Actuation-Tri--Servo%20Control-blueviolet?style=for-the-badge" alt="Actuation" />
-  <img src="https://img.shields.io/badge/Institution-VIT%20Chennai-800000?style=for-the-badge" alt="Institution" />
   <img src="https://img.shields.io/badge/License-MIT-purple?style=for-the-badge" alt="License" />
 </p>
 
@@ -19,8 +18,8 @@
 </p>
 
 <p align="center">
-  <strong>Developed by Aakar Gupta &amp; Mustafa Bakshi &nbsp;|&nbsp; Guided by Dr. Lakshmi Harika Palivela</strong><br>
-  <em>Vellore Institute of Technology (VIT), Chennai — Software Engineering Project (Embedded Systems &amp; Hardware Automation)</em>
+  <strong>Developed by Aakar Gupta</strong><br>
+  <em>Embedded Systems &amp; Hardware Automation</em>
 </p>
 
 ---
@@ -33,9 +32,7 @@
 |:---|:---|
 | **Repository Name** | `Automated-Conveyor-Based-Color-Sorting-System` |
 | **Project Type** | Embedded Systems / Mechatronics & Hardware Automation |
-| **Academic Institution** | Vellore Institute of Technology (VIT), Chennai |
-| **Student Contributors** | Aakar Gupta (`24BRS1321`), Mustafa Bakshi (`24BRS1034`) |
-| **Project Faculty Guide** | Dr. Lakshmi Harika Palivela |
+| **Developer** | Aakar Gupta |
 | **Target Controller** | Arduino Uno R3 (Microchip ATmega328P @ 16 MHz, 5V TTL) |
 | **Optical Sensor** | TAOS / ams TCS3200 RGB Light-to-Frequency Converter |
 | **Actuator Topology** | 1x Continuous Rotation Drive Servo (D10) + 2x TowerPro SG90 9g Micro Servos (D11, D12) |
@@ -65,7 +62,7 @@
 | 6 | [Component Catalog & Bill of Materials](#6-component-catalog--bill-of-materials) | 17 | [Project Roadmap & Future Work](#17-project-roadmap--future-work) |
 | 7 | [Wiring & Pin Interconnections](#7-wiring--pin-interconnections) | 18 | [Repository Directory Structure](#18-repository-directory-structure) |
 | 8 | [Embedded Firmware Architecture](#8-embedded-firmware-architecture) | 19 | [Troubleshooting Guide](#19-troubleshooting-guide) |
-| 9 | [Mathematical Color Classification Model](#9-mathematical-color-classification-model) | 20 | [Contributors & Institutional Credits](#20-contributors--institutional-credits) |
+| 9 | [Mathematical Color Classification Model](#9-mathematical-color-classification-model) | 20 | [Author & Credits](#20-author--credits) |
 | 10 | [System Requirements](#10-system-requirements) | 21 | [License](#21-license) |
 | 11 | [Installation & Build Guide](#11-installation--build-guide) | 22 | [References & Technical Datasheets](#22-references--technical-datasheets) |
 
@@ -527,8 +524,7 @@ Automated-Conveyor-Based-Color-Sorting-System/
 │       ├── figure_5_4a_sequence_diagram.png # UML sequence diagram
 │       ├── figure_5_4b_activity_flowchart.png # Operational activity flowchart
 │       ├── figure_6_1_fsm_state_transitions.png # FSM state transition matrix
-│       ├── conveyor_sorting_demo.gif        # Optimized animated demonstration
-│       └── vit_chennai_logo.png             # Institutional logo
+│       └── conveyor_sorting_demo.gif        # Optimized animated demonstration
 │
 └── media/                                   # Authentic project media
     ├── images/                              # Descriptively named hardware photographs
@@ -569,16 +565,12 @@ Automated-Conveyor-Based-Color-Sorting-System/
 
 ---
 
-## 20. Contributors & Institutional Credits
+## 20. Author & Credits
 
-This project was conceived, designed, fabricated, and validated as an academic Software Engineering Project in Embedded Systems and Hardware Automation at **Vellore Institute of Technology (VIT), Chennai**.
+This project was conceived, designed, fabricated, and validated as an embedded systems and hardware automation engineering project.
 
-### Student Contributors
-* **Aakar Gupta** — Registration No: `24BRS1321` — *System Architecture, Firmware Design, Mechanical Assembly, and Validation*
-* **Mustafa Bakshi** — Registration No: `24BRS1034` — *Hardware Prototyping, Wiring Integration, Sensor Calibration, and Testing*
-
-### Academic Project Guide
-* **Dr. Lakshmi Harika Palivela** — *Faculty Guide & Technical Reviewer, School of Computer Science and Engineering (SCOPE), VIT Chennai*
+### Project Author
+* **Aakar Gupta** — *System Architecture, Firmware Design, Mechanical Assembly, and Validation*
 
 ---
 
