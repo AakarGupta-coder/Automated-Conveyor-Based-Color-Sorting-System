@@ -1,0 +1,33 @@
+# Virtual environment & Python caches
+.venv/
+venv/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Academic reports & raw office documents (excluded from public repo)
+*.docx
+*.doc
+*.pptx
+*.pdf
+Project Report.docx
+code.txt
+
+# Arduino build artifacts
+*.hex
+*.elf
+*.bin
+build/
+.vscode/
+.idea/
+
+# Operating system files
+Thumbs.db
+[Dd]esktop.ini
+.DS_Store
+
+# Temporary files
+*.tmp
+*.bak
+*~
