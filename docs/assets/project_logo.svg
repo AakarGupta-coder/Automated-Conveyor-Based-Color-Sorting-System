@@ -98,7 +98,7 @@
     <!-- Institution and Tech Badges -->
     <g transform="translate(0, 252)">
       <text x="0" y="15" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">
-        Vellore Institute of Technology (VIT), Chennai &nbsp;|&nbsp; Arduino Uno R3 &nbsp;|&nbsp; ATmega328P
+        Vellore Institute of Technology (VIT), Chennai  |  Arduino Uno R3  |  ATmega328P
       </text>
     </g>
   </g>
