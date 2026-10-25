@@ -53,7 +53,7 @@ This document catalogues all photographic evidence, video demonstrations, and sy
 ### 2.2 Video Demonstration 2: Full Continuous Multi-Package Demonstration (`24BRS1321,1034 Project Video.mp4`)
 
 * **File Location:** [`media/videos/24BRS1321,1034 Project Video.mp4`](../media/videos/24BRS1321,1034%20Project%20Video.mp4)
-* **Cloud Mirror Link:** [Google Drive Full-HD Demonstration Video Placeholder]
+* **Cloud Mirror Link:** [Google Drive Full-HD Demonstration Video](https://drive.google.com/file/d/1ltLcR7KKIQ534UALP9VYCEiAVaNqRVgN/view?usp=drivesdk)
 * **Duration:** 72.60 Seconds (01:12.60)
 * **Framerate & Resolution:** 30.00 fps, 1920 x 1080 px (1080p Full HD)
 * **Format & Codec:** H.264 / AAC MP4 Container

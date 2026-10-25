@@ -461,7 +461,7 @@ Two authentic video recordings document the physical sorting system across singl
 ### Demonstration 2: Full Continuous Multi-Package Demonstration (`24BRS1321,1034 Project Video.mp4`)
 
 * **Video File:** `media/videos/24BRS1321,1034 Project Video.mp4` (178 MB, 72.60s, 1920x1080 @ 30 fps Full HD)
-* **Cloud Mirror Link:** [Google Drive Full-HD Demonstration Video Link Placeholder]
+* **Cloud Mirror Link:** [Google Drive Full-HD Demonstration Video](https://drive.google.com/file/d/1ltLcR7KKIQ534UALP9VYCEiAVaNqRVgN/view?usp=drivesdk)
 * **Full Chronological Breakdown:** Documented in [Media Index](docs/media.md#22-video-demonstration-2-full-continuous-multi-package-demonstration-24brs13211034-project-videomp4)
 * **Spoken Audio Transcript:** Documented in [Video Transcript](docs/video_transcript.md) (provides verbatim voice narration of warehouse inventory sorting logic)
 
