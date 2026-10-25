@@ -1,205 +1,214 @@
-# Software Engineering Project Report — Formatting, Content & Technical Audit Review
+# Software Engineering Project Report — Final Formatting, Content & Technical Audit Review
 
-**Project Title:** Automated Conveyor-Based Color Sorting System  
+**Project:** Automated Conveyor-Based Color Sorting System  
 **Institution:** School of Computer Science and Engineering, Vellore Institute of Technology (VIT), Chennai  
 **Authors:** Aakar Gupta (24BRS1321) & Mustafa Bakshi (24BRS1034)  
 **Project Guide:** Dr. Lakshmi Harika Palivela  
 **Academic Date:** October 2026  
-**Deliverable Artifacts:**
-* Redesigned Editable Document: [`Automated_Conveyor_Color_Sorting_System_Report_Final.docx`](file:///d:/Aakar/College/Software%20Project/Automated_Conveyor_Color_Sorting_System_Report_Final.docx)
-* Final Exported Academic PDF: [`Automated_Conveyor_Color_Sorting_System_Report_Final.pdf`](file:///d:/Aakar/College/Software%20Project/Automated_Conveyor_Color_Sorting_System_Report_Final.pdf)
-* Untouched Original Backup: [`VIT_Chennai_Software_Engineering_Project_Report.pdf`](file:///d:/Aakar/College/Software%20Project/VIT_Chennai_Software_Engineering_Project_Report.pdf)
+**Final Deliverables:**
+* Final Editable Word Document: [`Automated_Conveyor_Color_Sorting_System_Report_Final.docx`](file:///d:/Aakar/College/Software%20Project/Automated_Conveyor_Color_Sorting_System_Report_Final.docx)
+* Final Exported PDF Document: [`Automated_Conveyor_Color_Sorting_System_Report_Final.pdf`](file:///d:/Aakar/College/Software%20Project/Automated_Conveyor_Color_Sorting_System_Report_Final.pdf)
+* Archived Superseded Reports Folder: [`old docs/`](file:///d:/Aakar/College/Software%20Project/old%20docs/)
 
 ---
 
-## 1. Executive Summary of Redesign
+## 1. Actual Logo Colors Sampled (Source of Truth: `docs/assets/sortbot_logo.png`)
 
-The academic project report has been transformed from an unstyled draft with manual dot-leader tables and 47 continuous sections into an IEEE-inspired technical university publication. The redesigned document implements the visual identity of the **SORTBOT** color palette, isolates page borders strictly to the title page, dynamically compiles front matter fields (TOC, List of Figures, List of Tables) via Microsoft Word automation, and ensures technical consistency with the verified physical hardware prototype and production firmware.
-
----
-
-## 2. Document Architecture and Structural Organization
-
-The redesigned document is structured into three clean, unlinked Word sections:
+Colors were sampled directly from the authentic `docs/assets/sortbot_logo.png` image asset using PIL raster analysis:
 
 ```mermaid
-graph TD
-    A["Report Root Architecture"] --> B["Section 1: Title Page"]
-    A --> C["Section 2: Front Matter"]
-    A --> D["Section 3: Main Body & Appendices"]
-
-    B --> B1["Exclusive Dark Navy Page Border (#10263D)"]
-    B --> B2["VIT Chennai Official Crest & School Designation"]
-    B --> B3["Project Title (20pt Bold) & Course Metadata"]
-    B --> B4["SORTBOT Mascot Insignia & Student/Guide Credentials"]
-    B --> B5["No Running Header / No Footer / Suppressed Page Number"]
-
-    C --> C1["No Page Borders (Explicitly Disabled)"]
-    C --> C2["Roman Numerals (i - viii) Centered in Footer"]
-    C --> C3["Acknowledgement (i) & Abstract (ii)"]
-    C --> C4["Dynamic Table of Contents (iii - iv)"]
-    C --> C5["Dynamic List of Figures (v) - 16 Figures"]
-    C --> C6["Dynamic List of Tables (vi) - 9 Tables"]
-    C --> C7["List of Abbreviations & Acronyms (vii - viii) - 2-Column Styled Table"]
-
-    D --> D1["No Page Borders (Explicitly Disabled)"]
-    D --> D2["Arabic Numerals (1 - 41) Right-Aligned in Footer"]
-    D --> D3["Running Header with Teal Rule Divider (#12CDB5)"]
-    D --> D4["Chapters 1 to 10 (Page Breaks Before Major Chapters)"]
-    D --> D5["IEEE References [1] to [8] with Hanging Indent"]
-    D --> D6["Appendix A: Verified Repository & Video Demonstration"]
-    D --> D7["Appendix B: Production Firmware Code Listing (386 Lines)"]
+graph LR
+    A["SORTBOT Logo Asset<br/>docs/assets/sortbot_logo.png"] --> B["Primary Dark Navy<br/>#030C16 / #10263D<br/>(Lettering & Outer Contours)"]
+    A --> C["Secondary Slate Blue<br/>#25445F / #236B5F<br/>(Robot Shading & Frame)"]
+    A --> D["Vibrant Mint / Teal<br/>#37F0BE / #48EFB1<br/>(Illuminated Screen & Visor)"]
+    A --> E["Neutral Cream / Off-White<br/>#FCF9F2 / #F7F8F5<br/>(Chassis & Background)"]
+    A --> F["Charcoal Body Text<br/>#252B33<br/>(High-Contrast Reading)"]
 ```
 
----
-
-## 3. Typographic Hierarchy & Visual Styling
-
-The report enforces strict academic typography adhering to IEEE engineering guidelines and the SORTBOT color palette:
-
-### Color Palette Implementation
-* **Primary Dark Navy (`#10263D`):** Chapter titles (`Heading 1`), table header backgrounds, primary cover page border, acronym labels, citation indices.
-* **Secondary Slate Blue (`#25445F`):** Section headings (`Heading 2`), subsection titles (`Heading 3`), table and figure caption labels, running headers, institutional subtitle text.
-* **Teal (`#12CDB5`):** Running header accent underline rule, code callout left border (3pt solid), cover page decorative rule divider.
-* **Mint (`#83E6C1`):** Subtle visual highlights and diagram color key accents.
-* **Warm Off-White (`#F7F8F5`):** Alternating table row shading (zebra striping) and code callout box background shading.
-* **Body Text (`#252B33`):** High-contrast body typography optimized for laser printing and electronic reading.
-* **Muted Gray (`#687582`):** Page numbers, footer metadata, figure notes, and subtle table gridlines (`#CBD5E1`).
-
-### Typography Specification
-| Document Element | Font Family | Size | Weight / Style | Color | Spacing / Alignment |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Document Title** | Times New Roman | 20 pt | Bold | Dark Navy (`#10263D`) | Centered, 6pt before, 8pt after |
-| **Chapter Heading (H1)** | Times New Roman | 16 pt | Bold | Dark Navy (`#10263D`) | Left, 16pt before, 8pt after, Keep with next |
-| **Section Heading (H2)** | Times New Roman | 12.5 pt | Bold | Slate Blue (`#25445F`) | Left, 12pt before, 4pt after, Keep with next |
-| **Subsection Heading (H3)** | Times New Roman | 11.0 pt | Bold | Slate Blue (`#25445F`) | Left, 8pt before, 2pt after, Keep with next |
-| **Body Paragraphs** | Times New Roman | 10.5 pt | Regular | Charcoal (`#252B33`) | Justified, 1.15 line spacing, 5pt after |
-| **Table Header Row** | Times New Roman | 9.5 pt | Bold | White (`#FFFFFF`) | Dark Navy background (`#10263D`), padding 5pt/7pt |
-| **Table Data Cells** | Times New Roman | 9.0 pt | Regular | Charcoal (`#252B33`) | Padding 4pt/6pt, alternating zebra shading |
-| **Figure / Table Captions** | Times New Roman | 9.5 pt | Bold Prefix / Italic Title | Slate Blue (`#25445F`) | Centered (Figures) / Left (Tables), Keep with next |
-| **Code Callout Blocks** | Consolas | 8.5 pt (8.0 pt App B) | Monospace | Charcoal (`#252B33`) | 1.0 line spacing, Teal left border, `#F7F8F5` background |
-| **Running Header** | Times New Roman | 8.5 pt | Regular | Slate Blue (`#25445F`) | Right-aligned, Teal bottom border rule |
-| **Running Footer** | Times New Roman | 9.5 pt | Regular | Muted Gray (`#687582`) | Right-aligned (Body) / Centered (Front Matter) |
+### Exact Extracted Hex Values:
+* **Primary Dark Navy (`#030C16`):** RGB(3, 12, 22). Sampled from the pixel-art typography "SORTBOT" and outer contour strokes. Used for Chapter titles (`Heading 1`), table header backgrounds, title page border, and major emphasis.
+* **Secondary Slate Blue (`#25445F`):** RGB(37, 68, 95). Sampled from the robot's structural shadows. Used for Section headings (`Heading 2`), Subsection titles (`Heading 3`), caption labels, and running headers.
+* **Vibrant Mint / Teal (`#37F0BE`):** RGB(55, 240, 190). Sampled from the robot's illuminated face/visor. Used for running header accent rule, code callout left border (3pt solid), and title page decorative divider.
+* **Neutral Warm Off-White (`#F7F8F5`):** RGB(247, 248, 245). Sampled from the robot's light highlights. Used for alternating table row zebra shading and code box background shading.
+* **Charcoal Reading Neutral (`#252B33`):** RGB(37, 43, 51). High-contrast serif text optimized for print readability and IEEE document standards.
+* **Divider Gridline Gray (`#CBD5E1`):** RGB(203, 213, 225). Subtle table gridlines.
 
 ---
 
-## 4. Figures and Visual Assets Verification Matrix
+## 2. Strict Two-Column Layout Confirmation
 
-All 16 visual figures extracted from the original draft were processed, scaled to proper aspect ratio, centered, and linked to canonical captions:
-
-| Figure ID | Caption Title | Original Source | Dimensions (px) | Rendered Width | Status |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Figure 4.1** | Hardware Wiring and Interconnection Block Diagram | `image2.png` | 3270 × 1770 | 6.0 in (Wide) | Verified & Centered |
-| **Figure 4.2** | TCS3200 Programmable Color Sensor Module and Pin Configuration | `image3.png` | 700 × 900 | 3.2 in (Portrait) | Verified & Centered |
-| **Figure 4.3** | Optical Gantry Assembly with Downward-Facing Optical Shroud and Wiring | `image4.png` | 899 × 1349 | 3.5 in (Portrait) | Verified & Centered |
-| **Figure 5.1** | High-Level System Architecture and Layered Data Flow Diagram | `image5.png` | 3570 × 1920 | 6.0 in (Wide) | Verified & Centered |
-| **Figure 5.2** | UML Use Case Diagram of the Automated Package Sorter | `image6.png` | 2670 × 1620 | 5.8 in (Wide) | Verified & Centered |
-| **Figure 5.3** | Software Structure and Procedural Data Model Architecture | `image7.png` | 2970 × 1620 | 6.0 in (Wide) | Verified & Centered |
-| **Figure 5.4a**| UML Sequence Diagram Illustrating Detection and Actuation Flow | `image8.png` | 3270 × 1920 | 6.0 in (Wide) | Verified & Centered |
-| **Figure 5.4b**| Operational Activity Flowchart of the Microcontroller Firmware | `image9.png` | 2970 × 2220 | 5.8 in (Wide) | Verified & Centered |
-| **Figure 6.1** | Finite State Machine (FSM) State Transition and Timing Diagram | `image10.png` | 2962 × 1770 | 6.0 in (Wide) | Verified & Centered |
-| **Figure 7.1** | Arduino IDE 2.3.2 Environment with Real-Time Serial Monitor Telemetry | `image11.png` | 2970 × 1920 | 6.0 in (Wide) | Verified & Centered |
-| **Figure 7.2** | Visual Studio Code Workspace with Integrated Terminal Compilation | `image12.png` | 2970 × 1920 | 6.0 in (Wide) | Verified & Centered |
-| **Figure 7.3** | Git Distributed Version Control Command-Line Interface and Commit Graph | `image13.png` | 2970 × 1620 | 6.0 in (Wide) | Verified & Centered |
-| **Figure 9.1** | Assembled Rotary Carousel Conveyor Hardware Prototype Overview | `image14.png` | 1040 × 730 | 5.5 in (Medium) | Verified & Centered |
-| **Figure 9.2** | Calibrated Test Packages (White Wrapped Parcels and Brown Craft Boxes) | `image15.png` | 920 × 912 | 3.8 in (Square) | Verified & Centered |
-| **Figure 9.3** | Dual-Flap Servo Sorting Station and Integrated Diversion Chutes | `image16.png` | 1199 × 619 | 5.5 in (Medium) | Verified & Centered |
-| **Figure 9.4** | Live Operational Actuation Sequence Captured from Experimental Video | `image17.png` | 2147 × 440 | 6.2 in (Panoramic) | Verified & Centered |
+The report strictly implements a clean, IEEE-inspired **two-column technical-document layout**:
+* **Paper Size:** Standard A4 (8.27 in × 11.69 in / 210 mm × 297 mm).
+* **Margins:** 0.75 in (54 pt) top, bottom, left, and right. Total printable width: 6.77 in (487.4 pt).
+* **Two Equal Columns:** 3.235 in (233 pt) width each, separated by a 0.30 in (21.6 pt / 432 dxa) gutter.
+* **Front Matter (Pages i to v):** Maintained in the two-column layout:
+  * Acknowledgement & Abstract: Flowing in dual columns on Page i.
+  * Table of Contents: Dual-column dot-leader flow on Page ii.
+  * List of Figures: Dual-column dot-leader flow on Page iii.
+  * List of Tables: Dual-column dot-leader flow on Page iv.
+  * List of Abbreviations: Formatted 2-column tabular list inside column width on Page v.
+* **Main Technical Report (Pages 1 to 26):**
+  * Chapters 1 through 10, References, Appendix A, and Appendix B maintain two columns throughout.
+  * **Wide Element Spanning:** Wide system diagrams (Figures 4.1, 5.1, 5.2, 5.3, 5.4a, 5.4b, 6.1, 7.1, 7.2, 7.3, 9.4) and wide data tables (Tables 3.1, 3.2, 3.3, 4.1, 4.2, 7.1, 8.1, 8.2, 9.1) span full page width (6.5 in) via continuous section breaks (`w:type="continuous"` with `w:cols w:num="1"`), cleanly resuming the two-column layout (`w:cols w:num="2" w:space="432"`) immediately before and after.
+  * **Single-Column Figures:** Compact figures (Figure 4.2 sensor portrait, Figure 4.3 gantry portrait, Figure 9.1 overview, Figure 9.2 test packages, Figure 9.3 chutes) fit inside the 3.23 in column boundaries without interrupting the dual-column reading flow.
+  * **Appendix B Firmware Code:** Formatted across two balanced columns in Consolas 7.0 pt, adhering to IEEE/ACM transactions publication standards.
 
 ---
 
-## 5. Tables and Data Formats Verification Matrix
+## 3. Title-Page Border Isolation Confirmation
 
-All 9 data tables and 5 code callout blocks were restructured with exact column geometry, row split prevention (`cantSplit`), header repetition (`tblHeader`), and clean cell padding:
-
-| Table ID | Table Name | Columns | Rows | Headers Styled | Zebra Shading | Status |
-| :--- | :--- | :---: | :---: | :---: | :---: | :--- |
-| **Table 3.1** | Project Schedule and Engineering Phase Breakdown | 4 | 11 | Yes (`#10263D`) | Yes (`#F7F8F5`) | Formatted & Verified |
-| **Table 3.2** | System Risk Identification, Impact Analysis, and Mitigations | 5 | 7 | Yes (`#10263D`) | Yes (`#F7F8F5`) | Formatted & Verified |
-| **Table 3.3** | Component Bill of Materials (BOM) and Effort Estimation | 5 | 9 | Yes (`#10263D`) | Yes (`#F7F8F5`) | Formatted & Verified |
-| **Table 4.1** | Hardware Requirements and Component Specifications | 4 | 9 | Yes (`#10263D`) | Yes (`#F7F8F5`) | Formatted & Verified |
-| **Table 4.2** | Software Requirements, Toolchain, and Embedded Dependencies | 4 | 7 | Yes (`#10263D`) | Yes (`#F7F8F5`) | Formatted & Verified |
-| **Table 7.1** | Summary of Software Engineering Tools Utilized Across SDLC Phases | 4 | 6 | Yes (`#10263D`) | Yes (`#F7F8F5`) | Formatted & Verified |
-| **Table 8.1** | Comprehensive Firmware Verification and System Test Cases | 5 | 9 | Yes (`#10263D`) | Yes (`#F7F8F5`) | Formatted & Verified |
-| **Table 8.2** | Debugging Log and Engineering Corrective Action Record | 5 | 6 | Yes (`#10263D`) | Yes (`#F7F8F5`) | Formatted & Verified |
-| **Table 9.1** | System Verification and Achievement Matrix Against Project Objectives | 4 | 8 | Yes (`#10263D`) | Yes (`#F7F8F5`) | Formatted & Verified |
-| **Listing 6.1**| Optical Sensor Channel Acquisition and Frequency Conversion | 1 | 1 | Code Callout | `#F7F8F5` | Consolas 8.5 pt |
-| **Listing 6.2**| Adaptive Baseline Conveyor Track Rejection Algorithm | 1 | 1 | Code Callout | `#F7F8F5` | Consolas 8.5 pt |
-| **Listing 6.3**| Normalized Relative Error Color Classification Algorithm | 1 | 1 | Code Callout | `#F7F8F5` | Consolas 8.5 pt |
-| **Listing 6.4**| Finite State Machine Implementation for Synchronized Actuation | 1 | 1 | Code Callout | `#F7F8F5` | Consolas 8.5 pt |
-| **Listing B.1**| Full Production Firmware (`rotary_sorter.ino` / `code.txt`) | 1 | 1 | Code Callout | `#F7F8F5` | Consolas 8.0 pt (386 lines) |
+The title page features an exclusive Dark Navy (`#030C16`) border with a 1.5 pt solid rule (`sz="12"`) and 24 pt offset from the page edge.
+* **Implementation:** Configured strictly on Section 1 via `<w:pgBorders w:offsetFrom="page" w:display="firstPage">`. All subsequent sections (Front Matter and Main Report) explicitly enforce `<w:pgBorders><w:top w:val="none"/><w:left w:val="none"/><w:bottom w:val="none"/><w:right w:val="none"/></w:pgBorders>`.
+* **Raster Boundary Scan Verification:** PyMuPDF raster analysis across all 32 pages of [`Automated_Conveyor_Color_Sorting_System_Report_Final.pdf`](file:///d:/Aakar/College/Software%20Project/Automated_Conveyor_Color_Sorting_System_Report_Final.pdf) at `x=24`:
+  * **Page 1 (Title Page):** 600 solid dark border pixels detected.
+  * **Pages 2 to 32 (All Subsequent Pages):** 0 border pixels detected.
+  * **Result:** Border isolation to Page 1 is 100% verified.
 
 ---
 
-## 6. Technical Audit and Implementation Consistency
+## 4. Rebuilt Contents and Indexes Verification
 
-During the audit and restructuring, several technical details were cross-referenced against the physical codebase and hardware recordings:
+The Table of Contents, List of Figures, and List of Tables were dynamically compiled via Microsoft Word COM automation (`$doc.Fields.Update()`):
 
-### 1. Transit Delay Calibration (`3100 ms` vs `3200 ms`)
-* **Finding:** In early preliminary development notes and certain explanatory comments in Listing 6.4, a delay of 3200 ms was cited. However, the production firmware in [`sketch/rotary_sorter.ino`](file:///d:/Aakar/College/Software%20Project/sketch/rotary_sorter.ino#L45) explicitly defines:
-  ```cpp
-  const unsigned long STOP_DELAY = 3100; // Delay from package confirmation to belt stop (ms)
-  ```
-* **Resolution:** Both values are documented in the engineering notes. 3100 ms is the experimentally tuned transit time representing the physical rotation between the optical gantry and the dual-flap diverter gates. The report's Appendix B and implementation chapters accurately preserve this tuned value.
+### 1. Table of Contents (PDF Page 3 / Doc Page ii)
+* **ACKNOWLEDGEMENT:** Page i
+* **ABSTRACT:** Page i
+* **TABLE OF CONTENTS:** Page ii
+* **LIST OF FIGURES:** Page iii
+* **LIST OF TABLES:** Page iv
+* **LIST OF ABBREVIATIONS:** Page v
+* **CHAPTER 1 — INTRODUCTION:** Page 1
+  * 1.1 Background and Motivation: Page 1
+  * 1.2 Problem Statement: Page 1
+  * 1.3 Objectives: Page 1
+  * 1.4 Scope and Limitations: Page 2
+* **CHAPTER 2 — LITERATURE SURVEY / EXISTING SYSTEM:** Page 2
+  * 2.1 Review of Existing Systems: Page 2
+  * 2.2 Gaps Identified and Proposed Solution: Page 2
+* **CHAPTER 3 — SOFTWARE PROCESS MODEL AND PLANNING:** Page 3
+  * 3.1 SDLC Model Chosen and Justification: Page 3
+  * 3.2 Project Schedule: Page 3
+  * 3.3 Risk Analysis and Mitigation Matrix: Page 4
+  * 3.4 Cost and Effort Estimation: Page 4
+* **CHAPTER 4 — REQUIREMENTS ANALYSIS:** Page 4
+  * 4.1 Functional Requirements: Page 4
+  * 4.2 Non-Functional Requirements: Page 5
+  * 4.3 Software Requirements Specification Summary: Page 5
+  * 4.4 Hardware and Software Requirements: Page 5
+* **CHAPTER 5 — SYSTEM DESIGN:** Page 7
+  * 5.1 System Architecture: Page 7
+  * 5.2 UML Use Case Diagram: Page 8
+  * 5.3 Class Diagram and Procedural Data Model: Page 8
+  * 5.4 Sequence Diagram and Operational Activity Flowchart: Page 9
+  * 5.5 ER Diagram and Database Design Analysis: Page 10
+  * 5.6 UI Design and Operator Interaction: Page 11
+* **CHAPTER 6 — IMPLEMENTATION:** Page 11
+  * 6.1 Technology Stack: Page 11
+  * 6.2 Module Description: Page 11
+  * 6.3 Key Code Snippets and Algorithmic Analysis: Page 12
+* **CHAPTER 7 — SOFTWARE TOOLS USED (DEMO SCREENSHOTS):** Page 13
+  * 7.1 Tool 1: Arduino IDE 2.3.2: Page 13
+  * 7.2 Tool 2: Visual Studio Code: Page 14
+  * 7.3 Tool 3: Git Distributed Version Control System: Page 15
+  * 7.4 Software Tools Summary Table: Page 16
+* **CHAPTER 8 — TESTING:** Page 16
+  * 8.1 Test Plan and Strategy: Page 16
+  * 8.2 Test Cases and Verification Matrix: Page 17
+  * 8.3 Test Results and Bug Log: Page 17
+  * 8.4 Experimental Testing and Laboratory Evidence: Page 18
+* **CHAPTER 9 — RESULTS AND DISCUSSION:** Page 18
+  * 9.1 Output Photographs and Live Demonstration: Page 18
+  * 9.2 Analysis Against Objectives: Page 20
+* **CHAPTER 10 — CONCLUSION AND FUTURE ENHANCEMENTS:** Page 20
+  * 10.1 Technical Conclusion: Page 20
+  * 10.2 Future Enhancements: Page 21
+* **REFERENCES:** Page 21
+* **APPENDIX A: PROJECT LINKS AND DELIVERABLES CHECKLIST:** Page 21
+  * Submission Checklist for Students: Page 21
+* **APPENDIX B: COMPLETE ANNOTATED FIRMWARE SOURCE CODE:** Page 22
 
-### 2. Relative Error Classification Logic & Tolerances
-* **Finding:** Classification does not rely on simple raw frequency thresholds. It implements normalized mean relative error:
-  $$\text{error}_{\text{color}} = \frac{1}{3} \sum_{c \in \{R, G, B\}} \frac{|\text{raw}_c - \text{ref}_c|}{\text{ref}_c}$$
-* **Thresholds:**
-  * Baseline Conveyor Rejection (`BASE_TOLERANCE`): 35% across all three channels (`BASE_R = 4432`, `BASE_G = 3693`, `BASE_B = 4541`).
-  * Package Color Discrimination (`COLOR_TOLERANCE`): 30% candidate threshold.
-  * Consecutive Debounce Samples (`REQUIRED_PACKAGE_READINGS`): 3 samples (150 ms window).
-* **Fallback Behavior:** If a non-base reading exceeds 30% error for both White and Brown references, the algorithm defaults to `WHITE` to guarantee deterministic diverting actuation rather than leaving an untracked package on the rotating carousel.
+### 2. List of Figures (PDF Page 4 / Doc Page iii)
+* **Figure 4.1:** Hardware Wiring and Interconnection Block Diagram: Page 6
+* **Figure 4.2:** TCS3200 Programmable Color Sensor Module and Pin Configuration: Page 7
+* **Figure 4.3:** Optical Gantry Assembly with Downward-Facing Optical Shroud and Wiring: Page 7
+* **Figure 5.1:** High-Level System Architecture and Layered Data Flow Diagram: Page 8
+* **Figure 5.2:** UML Use Case Diagram of the Automated Package Sorter: Page 8
+* **Figure 5.3:** Software Structure and Procedural Data Model Architecture: Page 9
+* **Figure 5.4a:** UML Sequence Diagram Illustrating Detection and Actuation Flow: Page 10
+* **Figure 5.4b:** Operational Activity Flowchart of the Microcontroller Firmware: Page 10
+* **Figure 6.1:** Finite State Machine (FSM) State Transition and Timing Diagram: Page 12
+* **Figure 7.1:** Arduino IDE 2.3.2 Environment with Real-Time Serial Monitor Telemetry: Page 14
+* **Figure 7.2:** Visual Studio Code Workspace with Integrated Terminal Compilation: Page 15
+* **Figure 7.3:** Git Distributed Version Control Command-Line Interface and Commit Graph: Page 16
+* **Figure 9.1:** Assembled Rotary Carousel Conveyor Hardware Prototype Overview: Page 19
+* **Figure 9.2:** Calibrated Test Packages (White Wrapped Parcels and Brown Craft Boxes): Page 19
+* **Figure 9.3:** Dual-Flap Servo Sorting Station and Integrated Diversion Chutes: Page 19
+* **Figure 9.4:** Live Operational Actuation Sequence Captured from Experimental Video: Page 19
 
-### 3. Deliverables Checklist & Live Links (Appendix A)
-* **GitHub Repository URL:** Updated from placeholder to active repository:  
-  `https://github.com/AakarGupta-coder/Automated-Conveyor-Based-Color-Sorting-System`
-* **Video Demonstration Path:** Updated from generic placeholder to tracked repository asset:  
-  `media/videos/test1.mp4` (verified multi-angle playback demonstrating continuous rotary carousel sorting and flap actuation).
-* **Submission Checklist:** All five student verification checkboxes were marked `[COMPLETED]` following repository publishing and video verification.
+### 3. List of Tables (PDF Page 5 / Doc Page iv)
+* **Table 3.1:** Project Schedule and Engineering Phase Breakdown: Page 3
+* **Table 3.2:** System Risk Identification, Impact Analysis, and Mitigations: Page 4
+* **Table 3.3:** Component Bill of Materials (BOM) and Effort Estimation: Page 4
+* **Table 4.1:** Hardware Requirements and Component Specifications: Page 5
+* **Table 4.2:** Software Requirements, Toolchain, and Embedded Dependencies: Page 7
+* **Table 7.1:** Summary of Software Engineering Tools Utilized Across SDLC Phases: Page 16
+* **Table 8.1:** Comprehensive Firmware Verification and System Test Cases: Page 17
+* **Table 8.2:** Debugging Log and Engineering Corrective Action Record: Page 17
+* **Table 9.1:** System Verification and Achievement Matrix Against Project Objectives: Page 20
 
 ---
 
-## 7. Cover Page Border Isolation Analysis
+## 5. Visual Inspection of Exported PDF
 
-To strictly fulfill the requirement that the decorative border appears exclusively on the cover page and never leaks onto subsequent pages, explicit OpenXML section property boundaries were enforced:
-
-```xml
-<!-- Section 1 sectPr (Title Page Only) -->
-<w:sectPr>
-  <w:pgBorders w:offsetFrom="page" w:display="firstPage">
-    <w:top w:val="single" w:sz="12" w:space="24" w:color="10263D"/>
-    <w:left w:val="single" w:sz="12" w:space="24" w:color="10263D"/>
-    <w:bottom w:val="single" w:sz="12" w:space="24" w:color="10263D"/>
-    <w:right w:val="single" w:sz="12" w:space="24" w:color="10263D"/>
-  </w:pgBorders>
-</w:sectPr>
-
-<!-- Section 2 & Section 3 sectPr (Front Matter & Main Body) -->
-<w:sectPr>
-  <w:pgBorders>
-    <w:top w:val="none"/>
-    <w:left w:val="none"/>
-    <w:bottom w:val="none"/>
-    <w:right w:val="none"/>
-  </w:pgBorders>
-</w:sectPr>
-```
-
-### Empirical Pixel Verification via PyMuPDF
-A raster boundary scan was executed on the rendered pages of [`Automated_Conveyor_Color_Sorting_System_Report_Final.pdf`](file:///d:/Aakar/College/Software%20Project/Automated_Conveyor_Color_Sorting_System_Report_Final.pdf) at 150 DPI across the 4% margin envelope:
-* **Page 1 (Title Page):** 633 non-white border pixels detected (Confirmed solid Dark Navy `#10263D` border).
-* **Page 2 (Acknowledgement):** 0 non-white edge pixels (No border).
-* **Page 3 (Abstract):** 0 non-white edge pixels (No border).
-* **Page 4 (Table of Contents):** 0 non-white edge pixels (No border).
-* **Pages 5 to 49 (All subsequent pages):** 0 non-white edge pixels (No border).
-
-Border isolation to Page 1 is 100% verified.
+All 32 pages of [`Automated_Conveyor_Color_Sorting_System_Report_Final.pdf`](file:///d:/Aakar/College/Software%20Project/Automated_Conveyor_Color_Sorting_System_Report_Final.pdf) were visually rendered and inspected at 150 DPI:
+1. **Typography & Margins:** Times New Roman 9.5 pt body text with 1.15 line spacing and 3 pt after. Margins remain within 0.75 in without clipping.
+2. **Column Balancing:** Text balances cleanly before and after full-width spans. No orphaned headings or isolated subheadings.
+3. **Table Formatting:** All 9 tables feature solid Dark Navy (`#030C16`) header rows with white bold text, subtle `#CBD5E1` gridlines, and alternating `#F7F8F5` rows.
+4. **Figure Clarity:** High-resolution assets from `docs/assets/` ensure crisp diagrams and text callouts at normal zoom. Captions remain bound to images.
+5. **Code Presentation:** Code listings 6.1–6.4 are displayed in clean styled callouts with `#37F0BE` borders. Appendix B reproduces the full 386 lines of production C++ firmware in two-column format across Pages 22 to 26 without truncation.
 
 ---
 
-## 8. Final Deliverables Summary
+## 6. Archive of Superseded Reports (`old docs/`)
 
-1. **[`Automated_Conveyor_Color_Sorting_System_Report_Final.pdf`](file:///d:/Aakar/College/Software%20Project/Automated_Conveyor_Color_Sorting_System_Report_Final.pdf):** 49-page PDF containing complete cover page, Roman-numeral front matter, dynamic dot-leader TOC/LOF/LOT, 10 technical chapters, IEEE references, Appendix A deliverables checklist, and Appendix B annotated firmware.
-2. **[`Automated_Conveyor_Color_Sorting_System_Report_Final.docx`](file:///d:/Aakar/College/Software%20Project/Automated_Conveyor_Color_Sorting_System_Report_Final.docx):** Clean 3-section Word document with proper Microsoft Word style hierarchy, custom caption styles, and dynamic field codes.
-3. **[`VIT_Chennai_Software_Engineering_Project_Report.pdf`](file:///d:/Aakar/College/Software%20Project/VIT_Chennai_Software_Engineering_Project_Report.pdf):** Original 33-page PDF preserved as an untouched backup.
+All previous Word and PDF drafts have been archived into [`old docs/`](file:///d:/Aakar/College/Software%20Project/old%20docs/):
+* `VIT_Chennai_Software_Engineering_Project_Report.docx` (5.85 MB original draft)
+* `VIT_Chennai_Software_Engineering_Project_Report.pdf` (748 KB original export)
+* `Project Report.docx` (21.7 KB preliminary draft)
+* `test_clean_cols.docx` (36.6 KB column test document)
+* `test_cols.docx` (36.7 KB column test document)
+
+The project root now contains **only** the authoritative final deliverables:
+* [`Automated_Conveyor_Color_Sorting_System_Report_Final.docx`](file:///d:/Aakar/College/Software%20Project/Automated_Conveyor_Color_Sorting_System_Report_Final.docx)
+* [`Automated_Conveyor_Color_Sorting_System_Report_Final.pdf`](file:///d:/Aakar/College/Software%20Project/Automated_Conveyor_Color_Sorting_System_Report_Final.pdf)
+
+---
+
+## 7. Script Cleanup Record
+
+### Deleted Temporary Scripts (Scratch Directory):
+* `build_redesigned_report.py`: Superseded single-column report builder.
+* `test_border.py`, `test_border_isolation.py`: Initial page-border test harnesses.
+* `test_fld.py`, `test_lof.py`, `test_lof_style.py`, `test_pgnum.py`: OpenXML field code test scripts.
+* `test_styling.py`, `test_twocol_continuous.py`, `test_twocol_toc.py`, `test_table_span.py`, `test_code_twocol.py`, `test_multi_sect.py`, `test_cont_pgnum.py`: Layout and pagination test utilities.
+* `inspect_tables.py`, `verify_pdf.py`: Diagnostic inspection scripts.
+
+### Deliberately Retained Production Scripts:
+* [`scratch/build_twocol_final_report.py`](file:///C:/Users/Aakar/.gemini/antigravity/brain/f497d995-ee02-49a1-964f-e108bf0a0eca/scratch/build_twocol_final_report.py): Authoritative production document generator.
+* [`scratch/update_and_export.ps1`](file:///C:/Users/Aakar/.gemini/antigravity/brain/f497d995-ee02-49a1-964f-e108bf0a0eca/scratch/update_and_export.ps1): Automated Word COM pipeline for field updates and PDF compilation.
+* [`scratch/render_pages.py`](file:///C:/Users/Aakar/.gemini/antigravity/brain/f497d995-ee02-49a1-964f-e108bf0a0eca/scratch/render_pages.py): PyMuPDF visual verification and QA tool.
+
+---
+
+## 8. Technical Content Audit & Consistency
+
+1. **Transit Delay (`STOP_DELAY = 3100` ms vs `3200` ms):**
+   * *Firmware Reality:* [`src/conveyor_color_sorting/conveyor_color_sorting.ino`](file:///d:/Aakar/College/Software%20Project/src/conveyor_color_sorting/conveyor_color_sorting.ino#L45) and [`code.txt`](file:///d:/Aakar/College/Software%20Project/code.txt#L45) define `const unsigned long STOP_DELAY = 3100;`.
+   * *Explanation:* The 3100 ms duration represents the experimentally calibrated physical travel time of a parcel from the optical sensor gantry to the diversion chutes. Preliminary notes citing 3200 ms reflect pre-calibration trials. Both are documented for academic completeness, with 3100 ms maintained as the authoritative production parameter.
+2. **Deterministic Fallback to `WHITE`:**
+   * In `detectColor()`, if non-base sensor readings exceed the 30% relative error threshold for both White and Brown references, the algorithm defaults to `"WHITE"`. This is an intentional fail-safe mechanism: it ensures that an unrecognized parcel is actively deflected into the primary collection chute rather than being left in indefinite circulation on the conveyor carousel.
+3. **Sensor Acquisition vs. Non-Blocking Claim:**
+   * While state machine transitions and servo dwell intervals are fully non-blocking via `millis()`, `readChannel()` utilizes `pulseIn(OUT, LOW, 100000)` with a 50 ms settling delay. A full RGB acquisition requires ~150–300 ms of microsecond-level pulse-width counting. This is documented in Section 6.3 as a bounded synchronous sampling window.
+4. **Authentic Deliverables Links:**
+   * GitHub Repository: [`https://github.com/AakarGupta-coder/Automated-Conveyor-Based-Color-Sorting-System`](https://github.com/AakarGupta-coder/Automated-Conveyor-Based-Color-Sorting-System)
+   * Video Demonstration: [`media/videos/test1.mp4`](file:///d:/Aakar/College/Software%20Project/media/videos/test1.mp4) (multi-angle physical prototype sorting demonstration).
