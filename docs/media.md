@@ -116,7 +116,21 @@ The high-resolution keyframes below document the 4-package continuous sorting de
 
 ---
 
-## 4. Architectural and Process Diagrams
+## 4. Voice Commentary & Demonstration Audio Transcript
+
+The full operational video (`media/videos/24BRS1321,1034 Project Video.mp4`) features authentic spoken technical narration explaining the hardware architecture, warehouse inventory sorting context, and compartment assignment logic.
+
+A complete transcript is documented in **[Video Transcript](video_transcript.md)**:
+
+> **Narrator (00:00 – 00:20):** *"So here we have warehouse inventory management system. It consists of this conveyor which is going to spin around. It is connected to the TCS3200 RGB sensor that will detect whether the package is of a brown colour or white colour. And then it will go to each of these servo motors over here that will segregate them into respective pockets..."*
+>
+> **Narrator (00:20 – 00:50):** *"...So if you just plug in the Arduino, as you can see, the conveyor is now running. Now we place a brown package and we place some other blue or white one. So the brown package is going to go into this specific compartment. The brown is the heavy work, and all other packages are considered light, such as the blue one, it will go into that specific compartment..."*
+>
+> **Narrator (00:50 – 01:12):** *"...Now if we place a white one, a brown one, and another white one, so the white one will get sorted into compartment one and the brown one into compartment two. So the white one goes into compartment one once again, and the brown one gets sorted into compartment two as such."*
+
+---
+
+## 5. Architectural and Process Diagrams
 
 All system block diagrams, UML state charts, and process flowcharts are rendered natively via Mermaid within markdown documents and archived as high-resolution PNGs:
 

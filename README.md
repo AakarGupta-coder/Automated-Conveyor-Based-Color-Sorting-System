@@ -463,6 +463,7 @@ Two authentic video recordings document the physical sorting system across singl
 * **Video File:** `media/videos/24BRS1321,1034 Project Video.mp4` (178 MB, 72.60s, 1920x1080 @ 30 fps Full HD)
 * **Cloud Mirror Link:** [Google Drive Full-HD Demonstration Video Link Placeholder]
 * **Full Chronological Breakdown:** Documented in [Media Index](docs/media.md#22-video-demonstration-2-full-continuous-multi-package-demonstration-24brs13211034-project-videomp4)
+* **Spoken Audio Transcript:** Documented in [Video Transcript](docs/video_transcript.md) (provides verbatim voice narration of warehouse inventory sorting logic)
 
 ```text
 00:00 - 00:20 | Stationary turntable overview; USB host cable connected to power Arduino Uno.
@@ -533,6 +534,7 @@ Automated-Conveyor-Based-Color-Sorting-System/
 │   ├── wiring.md                            # Hardware wiring & electrical specifications
 │   ├── operation.md                         # Build, upload, and calibration instructions
 │   ├── media.md                             # Photographic & video demonstration index
+│   ├── video_transcript.md                  # Verbatim voice narration transcript
 │   └── assets/                              # High-resolution architectural figures
 │       ├── sortbot_logo.png                 # SORTBOT project banner logo
 │       ├── figure_4_1_hardware_wiring.png   # Wiring interconnection block diagram
