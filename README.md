@@ -1,7 +1,7 @@
 # Automated Conveyor-Based Color Sorting System
 
 <p align="center">
-  <img src="docs/assets/project_logo.svg" alt="Automated Conveyor-Based Color Sorting System" width="95%" />
+  <img src="docs/assets/sortbot_logo.png" alt="SORTBOT - Automated Conveyor-Based Color Sorting System" width="95%" />
 </p>
 
 <p align="center">
@@ -519,7 +519,7 @@ Automated-Conveyor-Based-Color-Sorting-System/
 │   ├── operation.md                         # Build, upload, and calibration instructions
 │   ├── media.md                             # Photographic & video demonstration index
 │   └── assets/                              # High-resolution architectural figures
-│       ├── project_logo.svg                 # Vector project banner logo
+│       ├── sortbot_logo.png                 # SORTBOT project banner logo
 │       ├── figure_4_1_hardware_wiring.png   # Wiring interconnection block diagram
 │       ├── figure_5_1_system_architecture.png # End-to-end system architecture
 │       ├── figure_5_2_use_case_diagram.png  # UML use case diagram
